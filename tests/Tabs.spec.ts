@@ -4,6 +4,7 @@ test ("Handle tabs", async()=>{
 
 const browser=await chromium.launch();
 const context=await browser.newContext();
+<<<<<<< HEAD
 
 //Creating 1 Page
 const parentPage=await context.newPage();
@@ -41,3 +42,11 @@ const [childPage]=await Promise.all([context.waitForEvent('page'),await parentPa
 
 
 })
+=======
+const page=await context.newPage();
+
+
+
+
+})
+>>>>>>> 0fc9022da3ad7cd2484bee277e325f3032780056
