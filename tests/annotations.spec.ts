@@ -55,8 +55,16 @@ await expect(page).toHaveTitle("Google");
 })
 
 //fixme
-
+// it is also skip because it is not completed 
+// used when test is not completed or partially completed 
+//so at run time we can mention fixme
 test("test7",async({page})=>{
 await page.goto("https:/www.google.com");
+//No Assertion
 await expect(page).toHaveTitle("Google");
 })
+
+
+//slow
+// it is used for triplling the default timeout
+//if we use with some test then that test will take 90s for completing
