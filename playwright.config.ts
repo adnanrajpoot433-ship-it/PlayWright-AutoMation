@@ -30,7 +30,8 @@ export default defineConfig({
              ['dot'], // dots shows the test pass or fail in the way like .F. >> here fail is f
               ['junit',{outputfile:'results.xml'}], // generate reports in xml format, we needs to specify file name
 
-              ['json',{outputfile:'results.json'}]
+              ['json',{outputfile:'results.json'}],
+              ['allure-playwright'], // needs to use this sperate from above ones all
             ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -57,7 +58,7 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
+/*
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
