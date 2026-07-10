@@ -26,12 +26,12 @@ export default defineConfig({
   //reporter: 'html',
    reporter:[['html',{open:'always',outputfolder:'html-report'}], 
              ['list'],
-             ['line'],
-             ['dot'], // dots shows the test pass or fail in the way like .F. >> here fail is f
-              ['junit',{outputfile:'results.xml'}], // generate reports in xml format, we needs to specify file name
+             //['line'],
+             //['dot'], // dots shows the test pass or fail in the way like .F. >> here fail is f
+              //['junit',{outputfile:'results.xml'}], // generate reports in xml format, we needs to specify file name
 
-              ['json',{outputfile:'results.json'}],
-              ['allure-playwright'], // needs to use this sperate from above ones all
+              //['json',{outputfile:'results.json'}],
+             // ['allure-playwright'], // needs to use this sperate from above ones all
             ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -41,9 +41,10 @@ export default defineConfig({
   
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+    baseURL: "https://restful-booker.herokuapp.com",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace:'on',
   },
 
   /* Configure projects for major browsers */
